@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRX Boy Behavior Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>TRX Boy Behavior Analyzer  Behavioral Analysis 📈</h1>
+            <p>Apna TRX address daalein aur dekhein aapka transaction behavior kaisa hai.</p>
+        </header>
+
+        <div class="input-section">
+            <input type="text" id="trxAddress" placeholder="Yahan apna TRX wallet address paste karein...">
+            <button id="analyzeBtn">Analyze Karein</button>
+        </div>
+
+        <div id="loader" class="hidden"></div>
+
+        <div id="results-section" class="hidden">
+            <h2 id="analysis-title">Aapka Behavior Hai...</h2>
+            <div class="result-grid">
+                <div class="result-box">
+                    <h3>Total Transactions</h3>
+                    <p id="totalTrx">--</p>
+                </div>
+                <div class="result-box">
+                    <h3>Max Trx Ek Din Mein</h3>
+                    <p id="maxTrxDay">--</p>
+                </div>
+                <div class="result-box">
+                    <h3>Sabse Active Din</h3>
+                    <p id="mostActiveDay">--</p>
+                </div>
+                <div class="result-box">
+                    <h3>Behavior Score</h3>
+                    <p id="behaviorScore">--</p>
+                </div>
+            </div>
+            <div class="summary">
+                <h4>Summary</h4>
+                <p id="summaryText"></p>
+            </div>
+        </div>
+        
+        <div id="error-section" class="hidden">
+            <p id="errorText"></p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
